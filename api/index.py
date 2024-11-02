@@ -7,18 +7,18 @@ from pydantic import BaseModel
 app = FastAPI(docs_url="/api/docs", openapi_url="/api/openapi.json")
 
 
-@app.get("/api/healthchecker")
-def healthchecker():
-    return {"status": "success", "message": "Integrate FastAPI Framework with Next.js"}
-
-
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://nextjs-fastapi-framework-ashen.vercel.app"],
+    allow_origins=["https://nextjs-fastapi-framework-ashen.vercel.app", "http://localhost:3000"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+
+@app.get("/api/healthchecker")
+def healthchecker():
+    return {"status": "success", "message": "Integrate FastAPI Framework with Next.js"}
 
 
 class TodoCreate(BaseModel):
