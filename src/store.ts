@@ -35,7 +35,7 @@ export const useStore = create<TodoStore>((set) => ({
   },
   addTodo: async (todo) => {
     try {
-      const response = await fetch(`https://nextjs-fastapi-framework-ashen.vercel.app/api/todos`, {
+      const response = await fetch(`${URL}/todos`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -9,7 +9,7 @@ app = FastAPI(docs_url="/api/docs", openapi_url="/api/openapi.json")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://nextjs-fastapi-framework-ashen.vercel.app", "http://localhost:3000"],
+    allow_origins=["https://nextjs-fastapi-framework-ay5r6x757-shiqi-cuis-projects.vercel.app", "http://localhost:3000"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
