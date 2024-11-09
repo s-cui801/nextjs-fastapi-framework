@@ -19,7 +19,7 @@ app.add_middleware(
 
 @app.get("/api/healthchecker")
 def healthchecker():
-    return {"status": "success", "message": "Integrate FastAPI Framework with Next.js"}
+    return {"status": "success", "message": "Integrate FastAPI Framework with Next.js, and deploy it on Vercel"}
 
 
 class TodoCreate(BaseModel):
